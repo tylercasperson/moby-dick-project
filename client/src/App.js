@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import InputLabel from './components/layout/InputLabel';
 import RippleButton from './components/layout/RippleButton';
