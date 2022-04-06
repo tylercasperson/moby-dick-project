@@ -23,7 +23,6 @@ const InputLabel = (props) => {
         onFocus={() => onFocus(labelText)}
         onBlur={() => onBlur(labelText, inputText)}
         ref={inputText}
-        inputText
         type='text'
         id='inputText'
       />
