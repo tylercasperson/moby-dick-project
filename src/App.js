@@ -1,6 +1,7 @@
 import './App.css';
 import InputLabel from './components/layout/InputLabel';
 import RippleButton from './components/layout/RippleButton';
+import List from './components/layout/List';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       >
         <InputLabel label={'File Location'} />
         <RippleButton />
+        <List array={[{ word: 'one', count: 1000 }]} />
       </div>
     </div>
   );
