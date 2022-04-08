@@ -1,27 +1,19 @@
 import './App.css';
-import InputLabel from './components/layout/InputLabel';
-import RippleButton from './components/layout/RippleButton';
-import List from './components/layout/List';
-import ImportFile from './components/sections/ImportFile';
+import ListArea from './components/sections/ListArea';
 
 function App() {
   return (
-    <div>
-      <div
-        style={{
-          width: '700px',
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          verticalAlign: 'middle',
-        }}
-      >
-        <InputLabel label={'File Location'} />
-        <RippleButton />
-        <List array={[{ word: 'one', count: 1000 }]} />
-        <ImportFile />
-      </div>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      <h2 style={{ margin: '10vmin', textAlign: 'center' }}>
+        I was asked to parse a pdf story of Moby Dick. I have included the words to be excluded when
+        counting the frequency of occurances.
+      </h2>
+      <ListArea />
     </div>
   );
 }
