@@ -3,13 +3,13 @@ import ListItem from './ListItem';
 
 const List = (props) => {
   return (
-    <div>
+    <div style={{ boder: '1pt solid black', height: '60vh' }}>
       <ul
         style={{
           position: 'relative',
-          height: '40vh',
+          height: '100%',
           width: '30vw',
-          margin: '100px auto 0',
+          margin: '2vmin',
           padding: '10px',
           boxSizing: 'border-box',
           background: 'rgba(0, 0, 0, 0.1)',
@@ -19,7 +19,20 @@ const List = (props) => {
         }}
       >
         {props.array.map((i, index) => (
-          <ListItem key={index} rank={index + 1} word={i.word} count={i.count} index={index} />
+          <ListItem
+            key={index}
+            rank={index + 1}
+            word={i.word}
+            count={i.count}
+            index={index}
+            content={
+              <>
+                Exclude this word <br />
+                from being counted
+              </>
+            }
+            onClick={props.onClick}
+          />
         ))}
       </ul>
     </div>

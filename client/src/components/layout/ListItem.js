@@ -15,16 +15,15 @@ const ListItem = (props) => {
         {props.count}
       </span>
       <span className='plusIconArea' style={{ width: '15%', textAlign: 'right' }}>
-        <Tooltip
-          content={
-            <>
-              Exclude this word <br />
-              from being counted
-            </>
-          }
-          direction='left'
-        >
-          <img src={plus} alt='plus' className='plusIcon' />
+        <Tooltip content={props.content} direction='left'>
+          <img
+            src={plus}
+            alt='plus'
+            className={'plusIcon ' + props.className}
+            onClick={props.onClick}
+            index={props.index}
+            word={props.word}
+          />
         </Tooltip>
       </span>
     </li>
