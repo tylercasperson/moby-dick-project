@@ -4,12 +4,16 @@ const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 4000;
 
+const parserRoutes = require('./routes/parserRoutes');
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static('public'));
 
 app.use(cors());
+
+app.use('/api/parseFile', parserRoutes);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '/client/build')));
