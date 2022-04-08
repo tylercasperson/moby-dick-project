@@ -17,7 +17,8 @@ label {
 
 #inputText {
   width: 100%;
-  padding: 20px;
+  padding: 20px 0px;
+  margin-left: -2px;
   border: 2px solid black;
   font-size: 20px;
   font-weight: 800;
@@ -30,7 +31,7 @@ label {
 }
 
 .active {
-  top: -25px;
+  top: -35px;
   font-size: 20px;
   font-weight: 900;
   letter-spacing: 6px;
@@ -117,9 +118,19 @@ label {
 .plusIcon {
   width: 1vw;
 }
-.plusIconArea:hover .plusIcon{
+.plusIconArea:hover .plusIcon,.plusIconArea:hover .x{
   transform: rotate(45deg);
   transition: 0.5s;
+}
+.x{
+  transform: rotate(45deg);
+}
+.plusIconArea:hover .x{
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+.hide{
+  display: none
 }
 
 /* tooltip */
