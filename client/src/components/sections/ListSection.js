@@ -4,7 +4,7 @@ import ListInclude from '../layout/ListInclude';
 import ListExclude from '../layout/ListExclude';
 import { listParseFile } from '../data/actions/parserActions';
 
-const ListArea = () => {
+const ListSection = () => {
   const dispatch = useDispatch();
 
   const getFromState = useSelector((state) => state);
@@ -72,4 +72,4 @@ const ListArea = () => {
   );
 };
 
-export default ListArea;
+export default ListSection;

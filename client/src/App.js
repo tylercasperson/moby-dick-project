@@ -1,5 +1,5 @@
 import './App.css';
-import ListArea from './components/sections/ListArea';
+import ListSection from './components/sections/ListSection';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         I was asked to parse a pdf story of Moby Dick. I have included the words to be excluded when
         counting the frequency of occurances.
       </h2>
-      <ListArea />
+      <ListSection />
     </div>
   );
 }
